@@ -1,18 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package planocartes;
 
-/**
- *
- * @author katunaric
- */
+
 public class Retangulo {
     private Ponto2D ponto1;
     private Ponto2D ponto2;
-    
+
     public Retangulo(Ponto2D ponto1, Ponto2D ponto2){
         this.ponto1 = ponto1;
         this.ponto2 = ponto2;
@@ -33,7 +25,7 @@ public class Retangulo {
     public void setPonto2(Ponto2D ponto2) {
         this.ponto2 = ponto2;
     }
-    
+
     public Ponto2D getCentro(){
         double centroX = 0;
         double centroY = 0;
@@ -75,7 +67,7 @@ public class Retangulo {
 
             return base * altura;
     }
-    
+
     public double calculaPerimetro(){
         double base = 0;
         double altura = 0;
@@ -94,13 +86,13 @@ public class Retangulo {
                 altura = ponto2.getY() - ponto1.getY();
                 System.out.println("altura1" + altura);
             }
-         
+
         }
           return (base + altura)*2;
     }
-    
+
     public String toString(){
-        
+
         return "Centro do retângulo: "+ this.getCentro() + "\nÁrea: "+ this.calculaArea() + "\nPerímetro: " + this.calculaPerimetro();
     }
 }
